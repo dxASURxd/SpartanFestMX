@@ -1,39 +1,66 @@
---- 
+---
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro'
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://res.cloudinary.com/dnaokhykr/image/upload/v1692932314/spartan%20fest/spartanFest__logo_ohq4is.png"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <NavBar />
+    <slot />
+    <Footer/>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  html {
+    background-image: url("https://res.cloudinary.com/dnaokhykr/image/upload/v1692943660/spartan%20fest/covenant__bg_uc6fgt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f0f8ff;
+  }
+  * {
+    font-family: industryBook;
+  }
+  @font-face {
+    font-family: "industryBook";
+    src: url("../assets/fonts/Industry/IndustryTest-Book.otf");
+  }
+  @font-face {
+    font-family: "industryLight";
+    src: url("../assets/fonts/Industry/IndustryTest-Light.otf");
+  }
+  .industryLight{
+    font-family: industryLight;
+  }
+  @font-face {
+    font-family: "nativeRegular";
+    src: url("../assets/fonts/Native/Native-Regular.ttf");
+  }
+  .nativeRegular {
+    font-family: nativeRegular;
+  }
+  @font-face {
+    font-family: "mainFont";
+    src: url("../assets/fonts/stencilia/Stencilia-A.ttf");
+  }
+  .mainFont {
+    font-family: mainFont;
+  }
 </style>

@@ -1,0 +1,197 @@
+---
+import { ViewTransitions } from "astro:transitions";
+---
+
+<ViewTransitions />
+<nav class="relative px-4 py-4 flex justify-between items-center">
+  <a href="/">
+    <img
+      src="https://res.cloudinary.com/dnaokhykr/image/upload/v1692932313/spartan%20fest/SPARTANFEST_x0ceix.png"
+      alt="SPARTAN FEST MX 2023"
+      class="h-6 md:h-10"
+    />
+  </a>
+
+  <div class="lg:hidden">
+    <button class="navbar-burger flex items-center p-3">
+      <svg
+        class="block h-4 w-4 fill-current"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <ul
+    class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6"
+  >
+    <li class="relative">
+      <a href="/" class="text-lg hover:text-[#f1e9bb] group">
+        Inicio
+        <span
+          class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+        ></span>
+      </a>
+    </li>
+    <li class="relative">
+      <a href="/trayectoria" class="text-lg hover:text-[#f1e9bb] group">
+        Trayectoría
+        <span
+          class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+        ></span>
+      </a>
+    </li>
+    <!-- <li class="relative">
+      <a href="/galeria" class="text-lg hover:text-[#f1e9bb] group">
+        Galería
+        <span
+          class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+        ></span>
+      </a>
+    </li> -->
+    <li class="relative">
+      <a href="/blog" class="text-lg hover:text-[#f1e9bb] group">
+        Noticias
+        <span
+          class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+        ></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div class="navbar-menu relative z-50 hidden">
+  <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+  <nav
+    class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-4 bg__menu border-r overflow-y-auto"
+  >
+    <div class="flex items-center mb-8">
+      <a class="mr-auto text-3xl font-bold leading-none" href="#">
+        <img
+          src="https://res.cloudinary.com/dnaokhykr/image/upload/v1692932313/spartan%20fest/SPARTANFEST_x0ceix.png"
+          alt="SPARTAN FEST MX 2023"
+          class="h-6 md:h-10"
+        />
+      </a>
+      <button class="navbar-close">
+        <svg
+          class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="">
+      <ul>
+        <li class="relative mb-1">
+          <a
+            data-astro-reload
+            href="/"
+            class="text-lg hover:text-[#f1e9bb] group block p-4 font-semibold rounded"
+          >
+            Inicio
+            <span
+              class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li class="relative mb-1">
+          <a
+            data-astro-reload
+            href="/trayectoria"
+            class="text-lg hover:text-[#f1e9bb] group block p-4 font-semibold rounded"
+          >
+            Trayectoría
+            <span
+              class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li class="relative mb-1">
+          <a
+            data-astro-reload
+            href="/galeria"
+            class="text-lg hover:text-[#f1e9bb] group block p-4 font-semibold rounded"
+          >
+            Galería
+            <span
+              class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+        <li class="relative mb-1">
+          <a
+            data-astro-reload
+            href="/blog"
+            class="text-lg hover:text-[#f1e9bb] group block p-4 font-semibold rounded"
+          >
+            Noticias
+            <span
+              class="absolute left-1/2 transform -translate-x-1/2 bottom-0 h-1 bg-[#ceb527] w-0 transition-all duration-300 origin-center group-hover:w-full"
+            ></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelectorAll(".navbar-burger");
+    const menu = document.querySelectorAll(".navbar-menu");
+
+    if (burger.length && menu.length) {
+      for (var i = 0; i < burger.length; i++) {
+        burger[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    const close = document.querySelectorAll(".navbar-close");
+    const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+    if (close.length) {
+      for (var i = 0; i < close.length; i++) {
+        close[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+
+    if (backdrop.length) {
+      for (var i = 0; i < backdrop.length; i++) {
+        backdrop[i].addEventListener("click", function () {
+          for (var j = 0; j < menu.length; j++) {
+            menu[j].classList.toggle("hidden");
+          }
+        });
+      }
+    }
+  });
+</script>
+
+<style>
+  .bg__menu {
+    background-image: url("https://res.cloudinary.com/dnaokhykr/image/upload/v1692932318/spartan%20fest/haloRing_qfinfq.gif");
+    background-position: 28%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
